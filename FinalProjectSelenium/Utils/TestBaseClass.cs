@@ -12,10 +12,11 @@ namespace FinalProjectSelenium.Utils
     public class TestBaseClass
     {
         public IWebDriver driver;
+        public const int DISCOUNT = 10; // 100 = 100%
         [SetUp]
         public void Setup()
         {
-            ChromeOptions options = new ChromeOptions();
+            ChromeOptions options = new();
             options.AddArgument("start-maximized");
             driver = new ChromeDriver(options);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
