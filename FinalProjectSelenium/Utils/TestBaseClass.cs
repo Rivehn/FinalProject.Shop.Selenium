@@ -11,21 +11,23 @@ namespace FinalProjectSelenium.Utils
 {
     public class TestBaseClass
     {
-        public IWebDriver driver;
-        public const int DISCOUNT = 10; // 100 = 100%
-        [SetUp]
+        public IWebDriver? driver;
+        public const int DISCOUNT = 15; // 100 = 100% ACTUAL DISCOUNT = 15
+        public string? orderNumber; //Captured after checkout
+        public string? accountOrder; //Captured in My accounts
+        [OneTimeSetUp]
         public void Setup()
         {
             ChromeOptions options = new();
             options.AddArgument("start-maximized");
             driver = new ChromeDriver(options);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
-
+            options.AddUserProfilePreference("profile.default_content_setting_values.cookies", 2);
         }
-        [TearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
-           //driver.Quit();
+            driver.Quit();
         }
     }
 }
