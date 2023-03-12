@@ -35,13 +35,13 @@ namespace FinalProjectSelenium.Utils
         {
             //first name
             driver.FindElement(By.Id("billing_first_name")).Clear();
-            driver.FindElement(By.Id("billing_first_name")).SendKeys("Peter");
+            driver.FindElement(By.Id("billing_first_name")).SendKeys("Generoph");
             //last name
             driver.FindElement(By.Id("billing_last_name")).Clear();
-            driver.FindElement(By.Id("billing_last_name")).SendKeys("Deng");
+            driver.FindElement(By.Id("billing_last_name")).SendKeys("Depejs");
             //company name
             driver.FindElement(By.Id("billing_company")).Clear();
-            driver.FindElement(By.Id("billing_company")).SendKeys("nFocus");
+            driver.FindElement(By.Id("billing_company")).SendKeys("FocusN");
             //street address
             driver.FindElement(By.Id("billing_address_1")).Clear();
             driver.FindElement(By.Id("billing_address_1")).SendKeys("University Rd");
@@ -62,7 +62,7 @@ namespace FinalProjectSelenium.Utils
             driver.FindElement(By.Id("billing_phone")).SendKeys("02380592180");
             //email address
             driver.FindElement(By.Id("billing_email")).Clear();
-            driver.FindElement(By.Id("billing_email")).SendKeys("peter.deng@nfocus.co.uk");
+            driver.FindElement(By.Id("billing_email")).SendKeys("username.co.uk");
         }
 
         //TODO: Potentially

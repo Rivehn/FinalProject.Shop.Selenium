@@ -20,8 +20,8 @@ namespace FinalProjectSelenium
             driver.FindElement(By.LinkText("Dismiss")).Click();
             IWebElement username = driver.FindElement(By.Id("username"));
             IWebElement password = driver.FindElement(By.Id("password"));
-            username.SendKeys("peter.deng@nfocus.co.uk");
-            password.SendKeys("Q8UGRr2K27ZW2hJ");
+            username.SendKeys("username.co.uk");
+            password.SendKeys("password_is_fake");
             driver.FindElement(By.CssSelector("button[name='login']")).Click();
             Assert.That(driver.FindElement(By.LinkText("Log out")).Text,
                 Is.EqualTo(driver.FindElement(By.LinkText("Log out")).Text),
